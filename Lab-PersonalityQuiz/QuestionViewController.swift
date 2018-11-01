@@ -144,6 +144,12 @@ class QuestionViewController: UIViewController {
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
         
+        //return switches to default disabled state
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
+        
         multiLabel1.text = answers[0].text
         multiLabel2.text = answers[1].text
         multiLabel3.text = answers[2].text
@@ -154,12 +160,32 @@ class QuestionViewController: UIViewController {
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
         
+        // return slider to default when called
+        rangedSlider.setValue(0.5, animated: false)
+        
         //because there are only two labels to update but a variable amount of answers, we use first and last to access collection indices
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
     }
     
+    //MARK:- Segue functions to ResultsVC
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            let resultsViewController = segue.destination as? ResultsViewController
+            resultsViewController?.responses = answersChosen
+        }
+    }
+    
     func nextQuestion() {
+        questionIndex += 1
+        
+        // determine if there are any remaining questions, if so updateUI
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        }
         
     }
 

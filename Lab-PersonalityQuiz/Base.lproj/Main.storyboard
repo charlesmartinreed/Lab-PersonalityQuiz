@@ -318,6 +318,10 @@
                     <navigationItem key="navigationItem" title="Results" id="zrt-yy-KEe">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="jN6-Uu-ift"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultsAnswerLabel" destination="81O-en-xe4" id="TyD-eQ-dY5"/>
+                        <outlet property="resultsDefinitionLabel" destination="zmP-TG-nSs" id="Sbp-nQ-pkG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEc-DP-YEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
