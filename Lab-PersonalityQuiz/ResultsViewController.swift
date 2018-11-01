@@ -20,6 +20,8 @@ class ResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.hidesBackButton = true
         calculatePersonalityResult()
 
         // Do any additional setup after loading the view.
@@ -51,5 +53,8 @@ class ResultsViewController: UIViewController {
         resultsAnswerLabel.text = "You are a \(mostCommonAnswer.rawValue)!"
         resultsDefinitionLabel.text = mostCommonAnswer.definition
     }
+    
+    //MARK:- @IBActions
+    
 
 }
