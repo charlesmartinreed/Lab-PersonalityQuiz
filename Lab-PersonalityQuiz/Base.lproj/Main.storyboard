@@ -90,22 +90,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GHZ-eu-IWu">
-                                <rect key="frame" x="16" y="243.5" width="46" height="180"/>
+                                <rect key="frame" x="16" y="243.5" width="343" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM8-II-tCx">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLa-ue-4ur">
-                                        <rect key="frame" x="0.0" y="50" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="343" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-OH-vfK">
-                                        <rect key="frame" x="0.0" y="100" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="343" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ8-Ph-Xiw">
-                                        <rect key="frame" x="0.0" y="150" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="343" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -228,6 +228,7 @@
                             <constraint firstItem="p82-7h-iWL" firstAttribute="trailing" secondItem="hNM-rm-gEP" secondAttribute="trailing" constant="16" id="j0f-IM-5Yv"/>
                             <constraint firstItem="GHZ-eu-IWu" firstAttribute="centerY" secondItem="PQE-EO-6kG" secondAttribute="centerY" id="kGt-fe-ZpA"/>
                             <constraint firstItem="hNM-rm-gEP" firstAttribute="top" secondItem="p82-7h-iWL" secondAttribute="top" constant="20" id="loQ-ns-fPZ"/>
+                            <constraint firstItem="p82-7h-iWL" firstAttribute="trailing" secondItem="GHZ-eu-IWu" secondAttribute="trailing" constant="16" id="mZ4-KE-xFe"/>
                             <constraint firstItem="svz-ng-PfA" firstAttribute="leading" secondItem="PQE-EO-6kG" secondAttribute="leadingMargin" constant="16" id="oTN-ZM-xaA"/>
                             <constraint firstItem="I6L-dC-vza" firstAttribute="centerY" secondItem="PQE-EO-6kG" secondAttribute="centerY" id="uW5-qc-ZhR"/>
                         </constraints>
@@ -235,6 +236,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="3PB-Zs-8z9"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="AHP-xi-pgI" id="2i4-vV-rJZ"/>
+                        <outlet property="multiLabel2" destination="0hP-gD-Yee" id="3IQ-bl-CPM"/>
+                        <outlet property="multiLabel3" destination="o8s-Cv-qbf" id="AZf-6J-sAt"/>
+                        <outlet property="multiLabel4" destination="y9u-q3-uGG" id="H4p-Pb-kXw"/>
+                        <outlet property="multipleStackView" destination="VfD-WC-ZLu" id="t07-Ow-TLw"/>
+                        <outlet property="questionLabel" destination="hNM-rm-gEP" id="h3V-WZ-wwo"/>
+                        <outlet property="questionProgressView" destination="svz-ng-PfA" id="Dk5-Hs-7Qo"/>
+                        <outlet property="rangedLabel1" destination="imr-qs-Smu" id="kSh-Dy-mNn"/>
+                        <outlet property="rangedLabel2" destination="Yqd-BO-H72" id="F6G-NU-3Bs"/>
+                        <outlet property="rangedStackView" destination="I6L-dC-vza" id="IgI-q4-I66"/>
+                        <outlet property="singleButton1" destination="bM8-II-tCx" id="Xyu-cP-0XF"/>
+                        <outlet property="singleButton2" destination="yLa-ue-4ur" id="Hm6-jm-5GC"/>
+                        <outlet property="singleButton3" destination="c7m-OH-vfK" id="X7H-VS-phP"/>
+                        <outlet property="singleButton4" destination="XJ8-Ph-Xiw" id="pNh-fq-SYu"/>
+                        <outlet property="singleStackView" destination="GHZ-eu-IWu" id="4GH-C2-eVf"/>
                         <segue destination="z3c-Kc-ykN" kind="show" identifier="ResultsSegue" id="gjY-ut-puW"/>
                     </connections>
                 </viewController>
